@@ -1,13 +1,8 @@
-Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)] on win32
-Type "copyright", "credits" or "license()" for more information.
+
 >>> import numpy as np
 >>> import pylab as pl
 >>> from mpl_toolkits.mplot3d import Axes3D
 >>> from sklearn.cluster import Kmeans
-Traceback (most recent call last):
-  File "<pyshell#3>", line 1, in <module>
-    from sklearn.cluster import Kmeans
-ImportError: cannot import name 'Kmeans'
 
 >>> import sklearn.cluster
 >>> from sklearn.cluster import KMeans
@@ -40,11 +35,7 @@ ImportError: cannot import name 'Kmeans'
 	ax.set_zlabel('Petal length')
 	fignum=fignum+1
 
-	
-Traceback (most recent call last):
-  File "<pyshell#34>", line 1, in <module>
-    for name, est in estimators.iteritems():
-AttributeError: 'dict' object has no attribute 'iteritems'
+
 >>> for name, est in estimators.items():
 	fig=pl.figure(fignum,figsize=(4,3))
 	pl.clf()
@@ -66,11 +57,6 @@ KMeans(algorithm='auto', copy_x=True, init='k-means++', max_iter=300,
     n_clusters=3, n_init=10, n_jobs=1, precompute_distances='auto',
     random_state=None, tol=0.0001, verbose=0)
 
-<mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x00000158188C3D30>
-Traceback (most recent call last):
-  File "<pyshell#36>", line 9, in <module>
-    ax.w_xaxis.set_set_ticklabels([])
-AttributeError: 'XAxis' object has no attribute 'set_set_ticklabels'
 >>> for name, est in estimators.items():
 	fig=pl.figure(fignum,figsize=(4,3))
 	pl.clf()
@@ -129,53 +115,7 @@ Text(0.5,0,'Petal length')
 		  X[y==label,0].mean()+1.5,
 		  X[Y==label,2].mean(),name,
 		  horizontalalignment='center',
-		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))
-
-	
-Traceback (most recent call last):
-  File "<pyshell#51>", line 4, in <module>
-    ac.text3D(X[Y==label,3].mean(),
-NameError: name 'ac' is not defined
->>> NameError: name 'ac' is not defined
-SyntaxError: invalid syntax
->>> 
->>> 
->>> for name, label in [('Setosa',0),
-		    ('Versicolour',1),
-		    ('Virginica',2)]:
-	ax.text3D(X[Y==label,3].mean(),
-		  X[y==label,0].mean()+1.5,
-		  X[Y==label,2].mean(),name,
-		  horizontalalignment='center',
-		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))
-
-	
-Traceback (most recent call last):
-  File "<pyshell#56>", line 5, in <module>
-    X[y==label,0].mean()+1.5,
-NameError: name 'y' is not defined
->>> for name, label in [('Setosa',0),
-		    ('Versicolour',1),
-		    ('Virginica',2)]:
-	ax.text3D(X[Y==label,3].mean(),
-		  X[Y==label,0].mean()+1.5,
-		  X[Y==label,2].mean(),name,
-		  horizontalalignment='center',
-		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))$
-	
-SyntaxError: invalid syntax
->>>  for name, label in [('Setosa',0),
-		    ('Versicolour',1),
-		    ('Virginica',2)]:
-	ax.text3D(X[Y==label,3].mean(),
-		  X[Y==label,0].mean()+1.5,
-		  X[Y==label,2].mean(),name,
-		  horizontalalignment='center',
-		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))
-	
-SyntaxError: unexpected indent
->>> 
->>> 
+		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w')
 >>> 
 >>> 
 >>> 
@@ -190,30 +130,6 @@ SyntaxError: unexpected indent
 		  horizontalalignment='center',
 		  bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))
 
-	
-Traceback (most recent call last):
-  File "<pyshell#67>", line 8, in <module>
-    bbox=dict(alpha=.5, edgecolor='w', facecolot='w'))
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\mpl_toolkits\mplot3d\axes3d.py", line 1511, in text
-    text = super(Axes3D, self).text(x, y, s, **kwargs)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\axes\_axes.py", line 642, in text
-    t.update(kwargs)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\text.py", line 246, in update
-    self.set_bbox(bbox)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\text.py", line 522, in set_bbox
-    **props)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\patches.py", line 2509, in __init__
-    Patch.__init__(self, **kwargs)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\patches.py", line 141, in __init__
-    self.update(kwargs)
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\artist.py", line 847, in update
-    for k, v in props.items()]
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\artist.py", line 847, in <listcomp>
-    for k, v in props.items()]
-
-  File "C:\Users\pc\AppData\Local\Programs\Python\Python36\lib\site-packages\matplotlib\artist.py", line 840, in _update_property
-    raise AttributeError('Unknown property %s' % k)
-AttributeError: Unknown property facecolot
 >>> for name, label in [('Setosa',0),
 		    ('Versicolour',1),
 		    ('Virginica',2)]:
@@ -232,15 +148,7 @@ Text(2.026,8.088,'Virginica')
 >>> 
 >>> 
 >>> 
->>> Y=np.choose(Y,[n,2,0]).astype(np.float)
-Traceback (most recent call last):
-  File "<pyshell#75>", line 1, in <module>
-    Y=np.choose(Y,[n,2,0]).astype(np.float)
-NameError: name 'n' is not defined
 >>> Y=np.choose(Y,[1,2,0]).astype(np.float)
->>> ax.scatter(X[:,3], X[:,0], X[:,2], c=Y=
-	   
-SyntaxError: invalid syntax
 >>> ax.scatter(X[:,3], X[:,0], X[:,2], c=Y)
 <mpl_toolkits.mplot3d.art3d.Path3DCollection object at 0x00000158185B3470>
 >>> ax.w_xaxis.set_ticklabels([])
